@@ -106,7 +106,7 @@ const BlogPostCard = ({ post, index, showSummary }) => {
           <div className='text-right border-t pt-6 border-dashed'>
             <SmartLink
               href={post?.href}
-              className='next-accent-button inline-flex items-center rounded-md border px-4 py-2 transition-colors duration-200 hover:no-underline focus-visible:outline-none'>
+              className='next-accent-button next-article-detail-button inline-flex items-center rounded-md border px-4 py-2 transition-colors duration-200 hover:no-underline focus-visible:outline-none'>
               {locale.COMMON.ARTICLE_DETAIL}
               <i className='ml-1 fas fa-angle-right' />
             </SmartLink>

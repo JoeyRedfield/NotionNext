@@ -298,6 +298,26 @@ const Style = () => {
       .dark #theme-next .next-accent-button:focus-visible {
         box-shadow: 0 0 0 2px var(--next-focus-ring-dark);
       }
+      #theme-next .next-article-detail-button {
+        border-color: #f5a300;
+        background-color: #f7a70a;
+        color: #fffaf0;
+      }
+      #theme-next .next-article-detail-button:hover {
+        border-color: #eb9800;
+        background-color: #ee9d03;
+        color: #fffef9;
+      }
+      .dark #theme-next .next-article-detail-button {
+        border-color: #e59700;
+        background-color: #ef9f07;
+        color: #fffaf2;
+      }
+      .dark #theme-next .next-article-detail-button:hover {
+        border-color: #db8f00;
+        background-color: #e59500;
+        color: #fffef9;
+      }
 
       /* 菜单下划线动画 */
       #theme-next .menu-link {
