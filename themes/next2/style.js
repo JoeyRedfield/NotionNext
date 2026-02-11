@@ -8,25 +8,26 @@ const Style = () => {
   return (
     <style jsx global>{`
       #theme-next {
-        --next-bg: #fdf5e3;
-        --next-bg-dark: #2f242d;
-        --next-card-bg: #fcfbfb;
-        --next-card-bg-dark: #42373f;
-        --next-card-border: #e3cbb3;
-        --next-card-border-dark: #5c5059;
-        --next-text-primary: #493038;
-        --next-text-primary-dark: #f9e4c2;
-        --next-text-secondary: #826b7f;
-        --next-text-secondary-dark: #cfbac3;
-        --next-accent: #e2a89b;
-        --next-accent-strong: #d88f85;
-        --next-accent-contrast: #3b2c35;
-        --next-accent-soft: #f4d8d0;
-        --next-accent-soft-dark: #5a4f57;
-        --next-accent-soft-text: #6b4049;
-        --next-accent-soft-text-dark: #f3daba;
-        --next-focus-ring: rgba(216, 143, 133, 0.22);
-        --next-focus-ring-dark: rgba(226, 168, 155, 0.35);
+        /* Light palette: Phycat Caramel */
+        --next-bg: #fffbeb;
+        --next-bg-dark: #282a36;
+        --next-card-bg: #fffdf7;
+        --next-card-bg-dark: #2f3140;
+        --next-card-border: #f8d7a8;
+        --next-card-border-dark: #44475a;
+        --next-text-primary: #78350f;
+        --next-text-primary-dark: #f8f8f2;
+        --next-text-secondary: #9a5b19;
+        --next-text-secondary-dark: #7e8c9f;
+        --next-accent: #c98a35;
+        --next-accent-strong: #b57321;
+        --next-accent-contrast: #3f2505;
+        --next-accent-soft: #f8ece0;
+        --next-accent-soft-dark: rgba(217, 118, 127, 0.18);
+        --next-accent-soft-text: #78471c;
+        --next-accent-soft-text-dark: #f1d4d7;
+        --next-focus-ring: rgba(201, 138, 53, 0.24);
+        --next-focus-ring-dark: rgba(217, 118, 127, 0.3);
       }
 
       /* 底色 */
@@ -41,6 +42,16 @@ const Style = () => {
         color: var(--next-text-primary);
       }
       .dark #theme-next {
+        /* Dark palette: Phycat Vampire */
+        --next-accent: #d9767f;
+        --next-accent-strong: #c96a73;
+        --next-accent-contrast: #fff1f1;
+        --next-accent-soft: rgba(217, 118, 127, 0.14);
+        --next-accent-soft-dark: rgba(217, 118, 127, 0.2);
+        --next-accent-soft-text: #f4d9dc;
+        --next-accent-soft-text-dark: #f6dfe1;
+        --next-focus-ring: rgba(217, 118, 127, 0.28);
+        --next-focus-ring-dark: rgba(201, 106, 115, 0.34);
         color: var(--next-text-primary-dark);
       }
 
@@ -164,6 +175,25 @@ const Style = () => {
       .dark #theme-next .next-right-hover-chip:hover {
         background-color: var(--next-accent-soft-dark);
         border-color: var(--next-accent);
+        color: var(--next-accent-soft-text-dark);
+      }
+
+      #theme-next .next-right-active {
+        background-color: var(--next-accent-soft);
+        color: var(--next-accent-soft-text);
+        border: 1px solid color-mix(in srgb, var(--next-accent), transparent 40%);
+      }
+      .dark #theme-next .next-right-active {
+        background-color: var(--next-accent-soft-dark);
+        color: var(--next-accent-soft-text-dark);
+        border-color: color-mix(in srgb, var(--next-accent), transparent 28%);
+      }
+      #theme-next .next-right-active:hover {
+        background-color: color-mix(in srgb, var(--next-accent), transparent 82%);
+        color: var(--next-accent-soft-text);
+      }
+      .dark #theme-next .next-right-active:hover {
+        background-color: color-mix(in srgb, var(--next-accent-strong), transparent 78%);
         color: var(--next-accent-soft-text-dark);
       }
 

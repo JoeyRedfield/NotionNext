@@ -148,16 +148,18 @@ const LayoutBase = props => {
         {/* 右下角悬浮 */}
         <div
           ref={floatButtonGroup}
-          className='right-8 bottom-12 lg:right-2 fixed justify-end z-20 '>
+          className='right-8 bottom-12 lg:right-2 fixed z-20 flex flex-col items-end space-y-2'>
           <div
             className={
               (showRightFloat ? 'animate__animated ' : 'hidden') +
-              ' animate__fadeInUp rounded-md glassmorphism justify-center duration-500  animate__faster flex space-x-2 items-center cursor-pointer '
+              ' animate__fadeInUp rounded-md glassmorphism justify-center duration-500 animate__faster flex space-x-2 items-center cursor-pointer'
             }>
             <JumpToTopButton percent={percent} />
             <JumpToBottomButton />
-            <FloatDarkModeButton />
             {floatSlot}
+          </div>
+          <div className='rounded-md glassmorphism flex items-center cursor-pointer'>
+            <FloatDarkModeButton />
           </div>
         </div>
 

@@ -1,5 +1,4 @@
 import { BeiAnGongAn } from '@/components/BeiAnGongAn'
-import DarkModeButton from '@/components/DarkModeButton'
 import { siteConfig } from '@/lib/config'
 
 const Footer = ({ title }) => {
@@ -12,7 +11,6 @@ const Footer = ({ title }) => {
   return (
     <footer className='next-footer relative z-10 flex-shrink-0 justify-center text-center m-auto w-full leading-6 text-sm p-6'>
       <span>
-        <DarkModeButton />
         <i className='fas fa-copyright' /> {`${copyrightDate}`}{' '}
         <span className='mx-1 animate-pulse'>
           <i className='fas fa-heart' />

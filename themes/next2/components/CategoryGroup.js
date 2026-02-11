@@ -18,7 +18,7 @@ const CategoryGroup = ({ currentCategory, categories, variant = 'soft' }) => {
               className={
                 (selected
                   ? variant === 'default'
-                    ? 'bg-gray-600 text-white dark:bg-gray-700 '
+                    ? 'next-right-active '
                     : 'next-soft-chip-active '
                   : variant === 'default'
                     ? 'next-right-hover text-gray-600 dark:text-gray-300 '
@@ -30,7 +30,7 @@ const CategoryGroup = ({ currentCategory, categories, variant = 'soft' }) => {
                   className={`${
                     selected
                       ? variant === 'default'
-                        ? 'text-white fa-folder-open '
+                        ? 'fa-folder-open '
                         : 'fa-folder-open '
                       : variant === 'default'
                         ? 'text-gray-500 dark:text-gray-400 fa-folder '
