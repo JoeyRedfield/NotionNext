@@ -11,6 +11,18 @@ const Style = () => {
         /* Light palette: Phycat Caramel */
         --next-bg: #fffbeb;
         --next-bg-dark: #282a36;
+        --next-bg-image:
+          radial-gradient(circle at 12% 4%, rgba(249, 186, 99, 0.42) 0, rgba(249, 186, 99, 0) 32%),
+          radial-gradient(circle at 92% 10%, rgba(232, 146, 65, 0.32) 0, rgba(232, 146, 65, 0) 36%),
+          linear-gradient(180deg, #fffdf6 0%, #fff4dd 56%, #ffe8c4 100%),
+          repeating-linear-gradient(0deg, rgba(139, 90, 43, 0.08) 0 1px, transparent 1px 30px),
+          repeating-linear-gradient(90deg, rgba(139, 90, 43, 0.06) 0 1px, transparent 1px 30px);
+        --next-bg-image-dark:
+          radial-gradient(circle at 12% 4%, rgba(217, 118, 127, 0.28) 0, rgba(217, 118, 127, 0) 34%),
+          radial-gradient(circle at 92% 10%, rgba(107, 114, 178, 0.24) 0, rgba(107, 114, 178, 0) 38%),
+          linear-gradient(180deg, #1f212b 0%, #242735 52%, #1b1d28 100%),
+          repeating-linear-gradient(0deg, rgba(248, 248, 242, 0.06) 0 1px, transparent 1px 30px),
+          repeating-linear-gradient(90deg, rgba(248, 248, 242, 0.05) 0 1px, transparent 1px 30px);
         --next-card-bg: #fffdf7;
         --next-card-bg-dark: #2f3140;
         --next-card-border: #f8d7a8;
@@ -31,14 +43,39 @@ const Style = () => {
       }
 
       /* 底色 */
-      body {
+      body,
+      #theme-next {
         background-color: var(--next-bg, #fdf5e3);
+        background-image: var(--next-bg-image, none);
+        background-size: auto, auto, auto, 30px 30px, 30px 30px;
+        background-attachment: fixed;
+        background-position: center top;
+        background-blend-mode: normal, normal, normal, multiply, multiply;
       }
-      .dark body {
+      .dark body,
+      .dark #theme-next {
         background-color: var(--next-bg-dark, #2f242d);
+        background-image: var(--next-bg-image-dark, none);
+        background-size: auto, auto, auto, 30px 30px, 30px 30px;
+        background-attachment: fixed;
+        background-position: center top;
+        background-blend-mode: normal, normal, normal, screen, screen;
+      }
+
+      @media (max-width: 1024px) {
+        body,
+        #theme-next,
+        .dark body {
+          background-attachment: scroll;
+        }
+        .dark #theme-next {
+          background-attachment: scroll;
+        }
       }
 
       #theme-next {
+        position: relative;
+        isolation: isolate;
         color: var(--next-text-primary);
       }
       .dark #theme-next {
@@ -326,6 +363,12 @@ const Style = () => {
         border-color: #f5a300;
         background-color: #f7a70a;
         color: #fffaf0;
+        transition:
+          background-color 160ms ease,
+          border-color 160ms ease,
+          color 160ms ease,
+          box-shadow 160ms ease,
+          transform 160ms ease;
       }
       #theme-next .next-article-detail-button:hover {
         border-color: #eb9800;
@@ -333,14 +376,23 @@ const Style = () => {
         color: #fffef9;
       }
       .dark #theme-next .next-article-detail-button {
-        border-color: #e59700;
-        background-color: #ef9f07;
-        color: #fffaf2;
+        border-color: color-mix(in srgb, var(--next-accent), #ffffff 14%);
+        background-color: color-mix(in srgb, var(--next-accent), #111827 14%);
+        color: var(--next-accent-contrast);
+        box-shadow: 0 2px 8px rgba(217, 118, 127, 0.2);
       }
       .dark #theme-next .next-article-detail-button:hover {
-        border-color: #db8f00;
-        background-color: #e59500;
-        color: #fffef9;
+        border-color: color-mix(in srgb, var(--next-accent-strong), #ffffff 20%);
+        background-color: color-mix(in srgb, var(--next-accent-strong), #ffffff 10%);
+        color: var(--next-accent-contrast);
+        box-shadow:
+          0 8px 18px rgba(217, 118, 127, 0.34),
+          0 0 0 1px rgba(255, 255, 255, 0.14);
+        transform: translateY(-1px);
+      }
+      .dark #theme-next .next-article-detail-button:active {
+        transform: translateY(0);
+        box-shadow: 0 3px 10px rgba(217, 118, 127, 0.24);
       }
 
       /* 菜单下划线动画 */
