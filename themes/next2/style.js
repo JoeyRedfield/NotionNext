@@ -118,9 +118,33 @@ const Style = () => {
       }
 
       #theme-next .next-toc-active {
-        color: var(--next-accent-strong);
-        text-decoration: underline;
+        color: #b47800;
+        text-decoration: none;
         font-weight: 700;
+        background-color: color-mix(in srgb, #f7a70a, #fff 84%);
+        border-radius: 0.375rem;
+        padding: 0.06rem 0.32rem;
+      }
+      .dark #theme-next .next-toc-active {
+        color: var(--next-accent-soft-text-dark);
+        background-color: color-mix(in srgb, var(--next-accent), transparent 74%);
+      }
+
+      #theme-next .catalog-item {
+        color: #8a6770;
+        border-radius: 0.45rem;
+        transition: background-color 160ms ease-in-out, color 160ms ease-in-out;
+      }
+      #theme-next .catalog-item:hover {
+        background-color: color-mix(in srgb, #f7a70a, #fff 90%);
+        color: #b47800;
+      }
+      .dark #theme-next .catalog-item {
+        color: var(--next-text-secondary-dark);
+      }
+      .dark #theme-next .catalog-item:hover {
+        background-color: var(--next-accent-soft-dark);
+        color: var(--next-accent-soft-text-dark);
       }
 
       #theme-next .next-progress-track {

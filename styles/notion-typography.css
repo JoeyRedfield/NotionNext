@@ -12,18 +12,59 @@
 
 :root {
   /* Light palette: Phycat Caramel */
-  --phycat-text: #6f3d15;
-  --phycat-muted: #89572a;
-  --phycat-accent: #c98a35;
-  --phycat-border: rgba(201, 138, 53, 0.24);
-  --phycat-callout-bg: rgba(201, 138, 53, 0.09);
-  --phycat-code-bg: #fff7ed;
-  --phycat-quote-bg: rgba(201, 138, 53, 0.08);
-  --phycat-h1-text: color-mix(in srgb, var(--phycat-text), #201f1f 18%);
+  --phycat-text: #5e3a44;
+  --phycat-muted: #8a6770;
+  --phycat-accent: #f7a70a;
+  --phycat-border: rgba(247, 167, 10, 0.24);
+  --phycat-callout-bg: rgba(247, 167, 10, 0.1);
+  --phycat-code-bg: #faf5f0;
+  --phycat-inline-code-text: #b86514;
+  --phycat-quote-bg: #fcfbf8;
+  --phycat-h1-text: color-mix(in srgb, var(--phycat-text), #2a1b0d 20%);
   --phycat-h1-hover: var(--phycat-accent);
-  --phycat-h1-bar: color-mix(in srgb, var(--phycat-accent), #f8d88a 35%);
+  --phycat-h1-bar: color-mix(in srgb, var(--phycat-accent), #f5d18c 42%);
   --phycat-h2-text: #fffdf7;
-  --phycat-h3-text: color-mix(in srgb, var(--phycat-text), var(--phycat-accent) 22%);
+  --phycat-h3-text: #b47800;
+  --phycat-mark-bg: #fceac7;
+  --phycat-mark-bg-strong: #f5d18c;
+  --phycat-mark-text: #8b4f12;
+  --phycat-strong-text: #9b5a16;
+  --phycat-strong-shadow: none;
+  --phycat-italic-text: #a16a28;
+  --phycat-h2-bg: linear-gradient(92deg, #f5a000 0%, #f8ab07 54%, #f7a102 100%);
+  --phycat-h2-bg-hover: linear-gradient(
+    92deg,
+    #f4a000 0%,
+    #f7b315 52%,
+    #f0cf4f 100%
+  );
+  --phycat-h2-bg-motion: linear-gradient(
+    92deg,
+    #f5a000 0%,
+    #f7aa07 38%,
+    #f7aa07 52%,
+    #f7b71b 78%,
+    #f0cf4f 100%
+  );
+  --phycat-h2-border: color-mix(in srgb, #f5a90f, #fff 34%);
+  --phycat-h2-border-hover: color-mix(in srgb, #f3c64a, #fff 32%);
+  --phycat-h2-shadow: 0 4px 12px rgba(247, 167, 10, 0.26);
+  --phycat-h2-shadow-hover: 0 4px 12px rgba(142, 207, 238, 0.5),
+    0 7px 16px rgba(247, 167, 10, 0.26);
+  --phycat-h2-hover-text: var(--phycat-h2-text);
+  --phycat-h2-text-shadow: 0 1px 2px rgba(156, 103, 0, 0.24);
+  --phycat-h2-text-shadow-hover: 0 1px 3px rgba(148, 97, 0, 0.26);
+  --phycat-h2-hover-filter: none;
+  --phycat-h2-motion-duration: 720ms;
+  --phycat-h2-motion-ease: ease-out;
+  --phycat-toc-bg: color-mix(in srgb, var(--phycat-accent), #fff 94%);
+  --phycat-toc-item-hover-bg: color-mix(in srgb, var(--phycat-accent), #fff 88%);
+  --phycat-toc-item-active-bg: color-mix(in srgb, var(--phycat-accent), #fff 84%);
+  --phycat-toc-item-active-text: #b47800;
+  --phycat-table-hover-border: color-mix(in srgb, var(--phycat-accent), transparent 54%);
+  --phycat-table-header-bg: color-mix(in srgb, var(--phycat-accent), transparent 90%);
+  --phycat-table-row-hover-bg: color-mix(in srgb, var(--phycat-accent), #fff 94%);
+  --phycat-simple-table-row-hover-bg: color-mix(in srgb, var(--phycat-accent), #fff 94%);
 }
 
 .dark {
@@ -34,12 +75,69 @@
   --phycat-border: rgba(217, 118, 127, 0.34);
   --phycat-callout-bg: rgba(217, 118, 127, 0.13);
   --phycat-code-bg: rgba(0, 0, 0, 0.3);
+  --phycat-inline-code-text: #ffe8ea;
   --phycat-quote-bg: rgba(217, 118, 127, 0.11);
   --phycat-h1-text: color-mix(in srgb, var(--phycat-text), #fff 6%);
   --phycat-h1-hover: color-mix(in srgb, var(--phycat-accent), #f4c2c6 12%);
   --phycat-h1-bar: color-mix(in srgb, var(--phycat-accent), #f4c2c6 22%);
-  --phycat-h2-text: #fff4f5;
+  --phycat-h2-text: #eaedf8;
+  --phycat-h2-hover-text: #ff5555;
   --phycat-h3-text: color-mix(in srgb, var(--phycat-text), var(--phycat-accent) 28%);
+  --phycat-mark-bg: rgba(217, 118, 127, 0.26);
+  --phycat-mark-bg-strong: rgba(217, 118, 127, 0.38);
+  --phycat-mark-text: #ffe8ea;
+  --phycat-strong-text: color-mix(in srgb, var(--phycat-text), var(--phycat-accent) 38%);
+  --phycat-strong-shadow: 0 0 0.42em
+    color-mix(in srgb, var(--phycat-accent), transparent 82%);
+  --phycat-italic-text: color-mix(in srgb, var(--phycat-accent), #f4c2c6 40%);
+  --phycat-h2-bg: linear-gradient(
+    104deg,
+    rgba(47, 52, 74, 0.94) 0%,
+    rgba(53, 49, 74, 0.92) 62%,
+    rgba(83, 48, 64, 0.88) 100%
+  );
+  --phycat-h2-bg-hover: linear-gradient(
+    104deg,
+    rgba(48, 53, 76, 0.98) 0%,
+    rgba(56, 50, 76, 0.96) 58%,
+    rgba(110, 53, 69, 0.94) 100%
+  );
+  --phycat-h2-bg-motion: linear-gradient(
+    104deg,
+    rgba(47, 52, 74, 0.94) 0%,
+    rgba(54, 50, 75, 0.92) 40%,
+    rgba(54, 50, 75, 0.92) 54%,
+    rgba(110, 53, 69, 0.94) 100%
+  );
+  --phycat-h2-border: color-mix(in srgb, #bd93f9, transparent 78%);
+  --phycat-h2-border-hover: color-mix(in srgb, #ff5555, transparent 74%);
+  --phycat-h2-shadow: 0 6px 16px rgba(0, 0, 0, 0.34);
+  --phycat-h2-shadow-hover: 0 8px 20px color-mix(in srgb, #ff5555, transparent 76%);
+  --phycat-h2-text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --phycat-h2-text-shadow-hover: 0 0 10px color-mix(in srgb, #ff5555, transparent 68%);
+  --phycat-h2-hover-filter: none;
+  --phycat-h2-motion-duration: 680ms;
+  --phycat-h2-motion-ease: ease-out;
+  --phycat-toc-bg: color-mix(in srgb, var(--phycat-accent), transparent 90%);
+  --phycat-toc-item-hover-bg: color-mix(
+    in srgb,
+    var(--phycat-accent),
+    transparent 84%
+  );
+  --phycat-toc-item-active-bg: color-mix(
+    in srgb,
+    var(--phycat-accent),
+    transparent 78%
+  );
+  --phycat-toc-item-active-text: #ffe8ea;
+  --phycat-table-hover-border: color-mix(in srgb, var(--phycat-accent), transparent 46%);
+  --phycat-table-header-bg: color-mix(in srgb, var(--phycat-accent), transparent 82%);
+  --phycat-table-row-hover-bg: color-mix(in srgb, var(--phycat-accent), transparent 88%);
+  --phycat-simple-table-row-hover-bg: color-mix(
+    in srgb,
+    var(--phycat-accent),
+    transparent 88%
+  );
 }
 
 /* Optional palette switchers */
@@ -51,7 +149,7 @@
   --phycat-accent: #4cd964;
 }
 
-#notion-article .notion {
+.notion-post-body .notion {
   color: var(--phycat-text);
   font-family: 'Phycat WenKai', 'LXGW WenKai', 'PingFang SC', 'Noto Serif CJK SC',
     'Hiragino Sans GB', 'Microsoft YaHei', serif !important;
@@ -61,36 +159,36 @@
   text-rendering: optimizeLegibility;
 }
 
-#notion-article .notion .notion-text,
-#notion-article .notion li,
-#notion-article .notion td,
-#notion-article .notion th {
+.notion-post-body .notion .notion-text,
+.notion-post-body .notion li,
+.notion-post-body .notion td,
+.notion-post-body .notion th {
   color: var(--phycat-text);
 }
 
-#notion-article .notion .notion-text {
+.notion-post-body .notion .notion-text {
   margin: 0.26em 0 0.64em;
 }
 
-#notion-article .notion p,
-#notion-article .notion li {
+.notion-post-body .notion p,
+.notion-post-body .notion li {
   word-break: normal;
   overflow-wrap: anywhere;
 }
 
-#notion-article .notion a.notion-link,
-#notion-article .notion .notion-page-link {
+.notion-post-body .notion a.notion-link,
+.notion-post-body .notion .notion-page-link {
   color: var(--phycat-accent);
   text-decoration-color: color-mix(in srgb, var(--phycat-accent), transparent 55%);
 }
 
-#notion-article .notion .notion-h {
+.notion-post-body .notion .notion-h {
   color: var(--phycat-text);
   position: relative;
   letter-spacing: 0.01em;
 }
 
-#notion-article .notion .notion-h1 {
+.notion-post-body .notion .notion-h1 {
   font-size: 1.82rem;
   line-height: 1.32;
   width: 100%;
@@ -103,7 +201,7 @@
   transition: color 220ms ease, transform 220ms ease, text-shadow 220ms ease;
 }
 
-#notion-article .notion .notion-h1::after {
+.notion-post-body .notion .notion-h1::after {
   content: '';
   position: absolute;
   left: 50%;
@@ -117,20 +215,20 @@
     box-shadow 280ms ease, opacity 280ms ease;
 }
 
-#notion-article .notion .notion-h1:hover {
+.notion-post-body .notion .notion-h1:hover {
   color: var(--phycat-h1-hover);
   transform: translateY(-1px);
   text-shadow: 0 2px 8px color-mix(in srgb, var(--phycat-accent), transparent 86%);
 }
 
-#notion-article .notion .notion-h1:hover::after {
+.notion-post-body .notion .notion-h1:hover::after {
   left: 0;
   width: 100%;
   transform: none;
   box-shadow: 0 2px 8px color-mix(in srgb, var(--phycat-accent), transparent 76%);
 }
 
-#notion-article .notion .notion-h2 {
+.notion-post-body .notion .notion-h2 {
   font-size: 1.68rem;
   line-height: 1.33;
   font-weight: 700;
@@ -142,16 +240,31 @@
   padding: 0.22em 0.64em;
   border-left: 0;
   border-radius: 0.54em;
+  border: 1px solid var(--phycat-h2-border);
   color: var(--phycat-h2-text);
-  background: linear-gradient(
-    135deg,
-    color-mix(in srgb, var(--phycat-accent), #fff 10%),
-    var(--phycat-accent)
-  );
-  box-shadow: 0 3px 10px color-mix(in srgb, var(--phycat-accent), transparent 72%);
+  text-shadow: var(--phycat-h2-text-shadow);
+  background: var(--phycat-h2-bg-motion);
+  background-size: 200% 100%;
+  background-repeat: no-repeat;
+  background-position: 0 center;
+  box-shadow: var(--phycat-h2-shadow);
+  transition: transform 220ms ease, box-shadow 260ms ease, filter 220ms ease,
+    color 220ms ease,
+    background-position var(--phycat-h2-motion-duration) var(--phycat-h2-motion-ease),
+    border-color 220ms ease, text-shadow 220ms ease;
 }
 
-#notion-article .notion .notion-h3 {
+.notion-post-body .notion .notion-h2:hover {
+  transform: translateY(-1px);
+  border-color: var(--phycat-h2-border-hover);
+  color: var(--phycat-h2-hover-text);
+  text-shadow: var(--phycat-h2-text-shadow-hover);
+  background-position: 100% center;
+  filter: var(--phycat-h2-hover-filter);
+  box-shadow: var(--phycat-h2-shadow-hover);
+}
+
+.notion-post-body .notion .notion-h3 {
   font-size: 1.26rem;
   line-height: 1.34;
   width: auto !important;
@@ -160,9 +273,10 @@
   padding-left: 0.62em;
   color: var(--phycat-h3-text);
   font-weight: 700;
+  transition: color 200ms ease, transform 200ms ease, padding-left 200ms ease;
 }
 
-#notion-article .notion .notion-h3::before {
+.notion-post-body .notion .notion-h3::before {
   content: '';
   position: absolute;
   left: 0;
@@ -171,42 +285,54 @@
   width: 0.3em;
   border-radius: 99px;
   background: var(--phycat-accent);
+  transition: width 200ms ease, opacity 200ms ease;
 }
 
-#notion-article .notion .notion-h4,
-#notion-article .notion .notion-h5,
-#notion-article .notion .notion-h6 {
+.notion-post-body .notion .notion-h3:hover {
+  color: color-mix(in srgb, var(--phycat-h3-text), var(--phycat-accent) 36%);
+  transform: translateX(1px);
+  padding-left: 0.68em;
+}
+
+.notion-post-body .notion .notion-h3:hover::before {
+  width: 0.35em;
+  opacity: 0.95;
+}
+
+.notion-post-body .notion .notion-h4,
+.notion-post-body .notion .notion-h5,
+.notion-post-body .notion .notion-h6 {
   margin-top: 0.45em;
   margin-bottom: 0.16em;
 }
 
-#notion-article .notion .notion-list {
+.notion-post-body .notion .notion-list {
   margin: 0.1em 0 0.34em;
 }
 
-#notion-article .notion .notion-list-disc {
+.notion-post-body .notion .notion-list-disc {
   padding-inline-start: 1.22em;
 }
 
-#notion-article .notion .notion-list-numbered {
+.notion-post-body .notion .notion-list-numbered {
   padding-inline-start: 1.42em;
 }
 
-#notion-article .notion .notion-list li {
+.notion-post-body .notion .notion-list li {
   margin: 0;
   padding: 0;
   line-height: 1.68;
 }
 
-#notion-article .notion .notion-list-disc li {
+.notion-post-body .notion .notion-list-disc li {
   padding-left: 0.02em;
 }
 
-#notion-article .notion .notion-list-numbered li {
+.notion-post-body .notion .notion-list-numbered li {
   padding-left: 0.08em;
 }
 
-#notion-article .notion .notion-quote {
+.notion-post-body .notion .notion-quote {
   margin: 0.56em 0;
   padding: 0.5em 0.78em;
   border-left: 4px solid var(--phycat-accent);
@@ -216,74 +342,222 @@
   line-height: 1.64;
 }
 
-#notion-article .notion .notion-quote .notion-text {
+.notion-post-body .notion .notion-quote .notion-text {
   font-size: inherit;
   line-height: inherit;
   margin: 0;
 }
 
-#notion-article .notion .notion-callout {
+.notion-post-body .notion .notion-callout {
   border-radius: 12px;
   border: 1px solid var(--phycat-border);
   background: var(--phycat-callout-bg);
   margin: 0.52em 0;
 }
 
-#notion-article .notion .notion-callout-text {
+.notion-post-body .notion .notion-callout-text {
   line-height: 1.6;
 }
 
-#notion-article .notion .notion-inline-code {
+.notion-post-body .notion .notion-inline-code {
   font-family: 'Phycat Code', 'Cascadia Code', 'Fira Code', 'JetBrains Mono',
     'SFMono-Regular', Menlo, Monaco, Consolas, monospace !important;
   font-size: 0.9em;
   background: color-mix(in srgb, var(--phycat-accent), transparent 88%);
-  color: var(--phycat-accent);
+  color: var(--phycat-inline-code-text);
   border: 1px solid color-mix(in srgb, var(--phycat-accent), transparent 72%);
   border-radius: 6px;
   padding: 0.1em 0.35em;
 }
 
-#notion-article .notion .notion-code,
-#notion-article .notion pre,
-#notion-article .notion code {
+.notion-post-body .notion mark,
+.notion-post-body .notion .notion-yellow_background,
+.notion-post-body .notion .notion-yellow_background_co {
+  color: var(--phycat-mark-text) !important;
+  background: linear-gradient(
+    110deg,
+    var(--phycat-mark-bg),
+    var(--phycat-mark-bg-strong),
+    var(--phycat-mark-bg)
+  ) !important;
+  background-size: 220% 100% !important;
+  background-position: 0% 50% !important;
+  border-radius: 0.32em;
+  padding: 0.03em 0.26em;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  transition: background-position 220ms ease, box-shadow 220ms ease, filter 220ms ease;
+}
+
+.notion-post-body .notion mark:hover,
+.notion-post-body .notion .notion-yellow_background:hover,
+.notion-post-body .notion .notion-yellow_background_co:hover {
+  background-position: 100% 50% !important;
+  box-shadow: 0 2px 9px color-mix(in srgb, var(--phycat-accent), transparent 74%);
+  filter: saturate(1.04);
+}
+
+.notion-post-body .notion strong,
+.notion-post-body .notion b {
+  color: var(--phycat-strong-text);
+  font-weight: 760;
+  letter-spacing: 0.01em;
+  text-shadow: var(--phycat-strong-shadow);
+  transition: color 180ms ease, text-shadow 180ms ease;
+}
+
+.notion-post-body .notion strong:hover,
+.notion-post-body .notion b:hover {
+  color: color-mix(in srgb, var(--phycat-strong-text), var(--phycat-accent) 24%);
+  text-shadow: 0 1px 6px color-mix(in srgb, var(--phycat-accent), transparent 82%);
+}
+
+.notion-post-body .notion em,
+.notion-post-body .notion i {
+  color: var(--phycat-italic-text);
+  transition: color 180ms ease, transform 180ms ease;
+}
+
+.notion-post-body .notion em {
+  display: inline-block;
+  transform-origin: left center;
+}
+
+.notion-post-body .notion em:hover {
+  color: color-mix(in srgb, var(--phycat-italic-text), var(--phycat-accent) 28%);
+  transform: translateY(-0.5px) skewX(-3deg);
+}
+
+.notion-post-body .notion .notion-table-of-contents {
+  background: var(--phycat-toc-bg);
+  border: 1px solid var(--phycat-border);
+  border-radius: 10px;
+  padding: 0.4rem;
+}
+
+.notion-post-body .notion .notion-table-of-contents-item {
+  color: var(--phycat-muted);
+  border-radius: 8px;
+  transition: background-color 160ms ease, color 160ms ease;
+}
+
+.notion-post-body .notion .notion-table-of-contents-item:hover {
+  background: var(--phycat-toc-item-hover-bg);
+  color: var(--phycat-toc-item-active-text);
+}
+
+.notion-post-body .notion .notion-table-of-contents-active-item {
+  background: var(--phycat-toc-item-active-bg);
+  color: var(--phycat-toc-item-active-text) !important;
+  font-weight: 700;
+  border-radius: 8px;
+}
+
+.notion-post-body .notion .notion-code,
+.notion-post-body .notion pre,
+.notion-post-body .notion code {
   font-family: 'Phycat Code', 'Cascadia Code', 'Fira Code', 'JetBrains Mono',
     'SFMono-Regular', Menlo, Monaco, Consolas, monospace !important;
 }
 
-#notion-article .notion .notion-code {
+.notion-post-body .notion .notion-code {
   line-height: 1.56;
   border-radius: 12px;
   background: var(--phycat-code-bg);
   border: 1px solid var(--phycat-border);
 }
 
-#notion-article .notion .notion-table {
+.notion-post-body .notion pre {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.notion-post-body .notion .notion-asset-wrapper-image img,
+.notion-post-body .notion img.notion-image {
+  border-radius: 12px;
+  border: 1px solid color-mix(in srgb, var(--phycat-accent), transparent 74%);
+}
+
+.notion-post-body .notion .notion-bookmark {
+  border-radius: 12px;
+  border: 1px solid var(--phycat-border);
+  background: color-mix(in srgb, var(--phycat-accent), transparent 95%);
+  transition: border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.notion-post-body .notion .notion-bookmark:hover {
+  border-color: var(--phycat-table-hover-border);
+  box-shadow: 0 8px 20px color-mix(in srgb, var(--phycat-accent), transparent 90%);
+}
+
+.notion-post-body .notion .notion-toggle > summary {
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--phycat-accent), transparent 93%);
+  transition: background-color 160ms ease;
+}
+
+.notion-post-body .notion .notion-toggle > summary:hover {
+  background: color-mix(in srgb, var(--phycat-accent), transparent 87%);
+}
+
+.notion-post-body .notion .notion-table {
   border-radius: 10px;
   border: 1px solid var(--phycat-border);
   overflow: hidden;
+  transition: box-shadow 220ms ease, border-color 220ms ease;
 }
 
-#notion-article .notion .notion-table-cell {
+.notion-post-body .notion .notion-table:hover {
+  border-color: var(--phycat-table-hover-border);
+  box-shadow: 0 10px 24px color-mix(in srgb, var(--phycat-accent), transparent 90%);
+}
+
+.notion-post-body .notion .notion-table-cell {
   border-color: color-mix(in srgb, var(--phycat-accent), transparent 82%);
+  transition: background-color 180ms ease, border-color 180ms ease;
 }
 
-#notion-article .notion .notion-table-view-header-cell {
-  background: color-mix(in srgb, var(--phycat-accent), transparent 90%);
+.notion-post-body .notion .notion-table-view-header-cell {
+  background: var(--phycat-table-header-bg);
+  font-weight: 650;
+  transition: background-color 200ms ease;
 }
 
-#notion-article .notion .notion-hr {
+.notion-post-body .notion .notion-table-row:hover .notion-table-cell {
+  background: var(--phycat-table-row-hover-bg);
+  border-color: color-mix(in srgb, var(--phycat-accent), transparent 72%);
+}
+
+.notion-post-body .notion .notion-simple-table {
+  border-radius: 10px;
+  overflow: hidden;
+  transition: box-shadow 220ms ease;
+}
+
+.notion-post-body .notion .notion-simple-table:hover {
+  box-shadow: 0 8px 20px color-mix(in srgb, var(--phycat-accent), transparent 90%);
+}
+
+.notion-post-body .notion .notion-simple-table td {
+  transition: background-color 180ms ease, color 180ms ease;
+}
+
+.notion-post-body .notion .notion-simple-table tr:hover td {
+  background: var(--phycat-simple-table-row-hover-bg);
+}
+
+.notion-post-body .notion .notion-hr {
   border-color: color-mix(in srgb, var(--phycat-accent), transparent 76%);
   margin: 0.64em 0;
 }
 
-#notion-article .notion .notion-asset-caption {
+.notion-post-body .notion .notion-asset-caption {
   color: var(--phycat-muted);
   font-size: 0.92em;
 }
 
 /* Fix heading hash icon vertical alignment, especially on H2 */
-#notion-article .notion .notion-h .notion-hash-link {
+.notion-post-body .notion .notion-h .notion-hash-link {
   float: none;
   position: absolute;
   left: -1rem;
@@ -299,37 +573,37 @@
   line-height: 1;
 }
 
-#notion-article .notion .notion-h .notion-hash-link svg {
+.notion-post-body .notion .notion-h .notion-hash-link svg {
   width: 0.86rem;
   height: 0.86rem;
 }
 
-#notion-article .notion .notion-h2 .notion-hash-link {
+.notion-post-body .notion .notion-h2 .notion-hash-link {
   left: -1.04rem;
 }
 
 @media (max-width: 768px) {
-  #notion-article .notion {
+  .notion-post-body .notion {
     font-size: 15.8px;
     line-height: 1.58;
     letter-spacing: 0.01em;
   }
 
-  #notion-article .notion .notion-h1 {
+  .notion-post-body .notion .notion-h1 {
     font-size: 1.52rem;
     padding-bottom: 0.3em;
   }
 
-  #notion-article .notion .notion-h1::after {
+  .notion-post-body .notion .notion-h1::after {
     width: 3.4rem;
     height: 0.28rem;
   }
 
-  #notion-article .notion .notion-h2 {
+  .notion-post-body .notion .notion-h2 {
     font-size: 1.24rem;
   }
 
-  #notion-article .notion .notion-h .notion-hash-link {
+  .notion-post-body .notion .notion-h .notion-hash-link {
     left: -0.9rem;
   }
 }

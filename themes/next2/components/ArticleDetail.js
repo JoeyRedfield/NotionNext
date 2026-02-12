@@ -102,7 +102,7 @@ export default function ArticleDetail(props) {
         {/* Notion内容主体 */}
         <article id='article-wrapper' className='mx-auto'>
           <WWAds className='w-full' orientation='horizontal' />
-          {post && <NotionPage post={post} />}
+          {post && <NotionPage post={post} className='notion-post-body' />}
           <WWAds className='w-full' orientation='horizontal' />
         </article>
 
