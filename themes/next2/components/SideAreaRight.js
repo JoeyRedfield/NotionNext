@@ -8,6 +8,7 @@ import { useRouter } from 'next/router'
 import dynamic from 'next/dynamic'
 import Announcement from './Announcement'
 import LatestPostsGroup from './LatestPostsGroup'
+import SiteInfoStatsCard from './SiteInfoStatsCard'
 import { siteConfig } from '@/lib/config'
 const NextRecentComments = dynamic(() => import('./NextRecentComments'))
 
@@ -22,7 +23,7 @@ const NextRecentComments = dynamic(() => import('./NextRecentComments'))
  * @constructor
  */
 const SideAreaRight = (props) => {
-  const { tagOptions, currentTag, slot, categoryOptions, currentCategory, notice, latestPosts } = props
+  const { tagOptions, currentTag, slot, categoryOptions, currentCategory, notice, latestPosts, postCount, allPages } = props
   const { locale } = useGlobal()
   const router = useRouter()
   const announcementVisible = notice && Object.keys(notice).length > 0
@@ -47,6 +48,12 @@ const SideAreaRight = (props) => {
             {announcementVisible && <Card>
                 <Announcement post={notice} />
             </Card>}
+
+            {siteConfig('NEXT_RIGHT_SITE_INFO', null, CONFIG) && (
+                <Card>
+                    <SiteInfoStatsCard postCount={postCount} allPages={allPages} latestPosts={latestPosts} />
+                </Card>
+            )}
 
             {siteConfig('NEXT_RIGHT_LATEST_POSTS', null, CONFIG) && <Card><LatestPostsGroup latestPosts={latestPosts} variant='default' /></Card>}
             {slot}

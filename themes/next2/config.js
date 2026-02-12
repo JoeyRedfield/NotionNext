@@ -16,9 +16,11 @@ const CONFIG = {
   NEXT_PREVIEW_TAG_COUNT: 16, // 首页最多展示的标签数量，0为不限制
   NEXT_PREVIEW_CATEGORY_COUNT: 16, // 首页最多展示的分类数量，0为不限制
   NEXT_POST_HEADER_IMAGE_VISIBLE: false, // 文章详情页是否显示封面图
+  NEXT_SITE_CREATE_TIME: '', // 站点创建时间，支持 yyyy 或 yyyy-mm-dd，空则使用 SINCE
 
   // 右侧组件
   NEXT_RIGHT_BAR: true, // 是否显示右侧栏
+  NEXT_RIGHT_SITE_INFO: true, // 右侧栏网站资讯卡
   NEXT_RIGHT_LATEST_POSTS: true, // 右侧栏最新文章
   NEXT_RIGHT_CATEGORY_LIST: true, // 右侧边栏文章分类列表
   NEXT_RIGHT_TAG_LIST: true, // 右侧边栏标签分类列表
