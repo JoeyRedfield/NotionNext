@@ -1394,8 +1394,15 @@ code[class*='language-'] {
 }
 
 .notion-equation:active,
-.notion-equation:focus {
-  background: var(--select-color-2);
+.notion-equation:focus,
+.notion-equation:focus-visible {
+  background: rgba(45, 170, 219, 0.24);
+}
+
+.dark .notion-equation:active,
+.dark .notion-equation:focus,
+.dark .notion-equation:focus-visible {
+  background: rgba(148, 163, 184, 0.28);
 }
 
 .notion-frame .katex-display .katex {
