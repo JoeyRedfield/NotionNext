@@ -49,12 +49,6 @@ const SideAreaRight = (props) => {
                 <Announcement post={notice} />
             </Card>}
 
-            {siteConfig('NEXT_RIGHT_SITE_INFO', null, CONFIG) && (
-                <Card>
-                    <SiteInfoStatsCard postCount={postCount} allPages={allPages} latestPosts={latestPosts} />
-                </Card>
-            )}
-
             {siteConfig('NEXT_RIGHT_LATEST_POSTS', null, CONFIG) && <Card><LatestPostsGroup latestPosts={latestPosts} variant='default' /></Card>}
             {slot}
 
@@ -96,6 +90,12 @@ const SideAreaRight = (props) => {
                     <div className="px-2 pt-2">
                         <TagGroups tags={tagOptions} currentTag={currentTag} variant='default' />
                     </div>
+                </Card>
+            )}
+
+            {siteConfig('NEXT_RIGHT_SITE_INFO', null, CONFIG) && (
+                <Card>
+                    <SiteInfoStatsCard postCount={postCount} allPages={allPages} latestPosts={latestPosts} />
                 </Card>
             )}
 

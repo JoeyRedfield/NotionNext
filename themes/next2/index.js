@@ -21,7 +21,7 @@ import JumpToTopButton from './components/JumpToTopButton'
 import SideAreaLeft from './components/SideAreaLeft'
 import SideAreaRight from './components/SideAreaRight'
 import StickyBar from './components/StickyBar'
-import TagItem from './components/TagItem'
+import TagItemMini from './components/TagItemMini'
 import TocDrawer from './components/TocDrawer'
 import TocDrawerButton from './components/TocDrawerButton'
 import TopNav from './components/TopNav'
@@ -362,7 +362,7 @@ const LayoutCategoryIndex = props => {
   const { locale } = useGlobal()
   return (
     <div totalPosts={allPosts} {...props}>
-      <div className='bg-white dark:bg-hexo-black-gray px-10 py-10 shadow h-full'>
+      <div className='next-card border rounded-md px-10 py-10 shadow h-full'>
         <div className='dark:text-gray-200 mb-5'>
           <i className='mr-4 fas faTh' />
           {locale.COMMON.CATEGORY}:
@@ -401,7 +401,7 @@ const LayoutTagIndex = props => {
   const { locale } = useGlobal()
   return (
     <>
-      <div className='bg-white dark:bg-hexo-black-gray px-10 py-10 shadow h-full'>
+      <div className='next-card border rounded-md px-10 py-10 shadow h-full'>
         <div className='dark:text-gray-200 mb-5'>
           <i className='fas fa-tags mr-4' />
           {locale.COMMON.TAGS}:
@@ -410,7 +410,7 @@ const LayoutTagIndex = props => {
           {tagOptions.map(tag => {
             return (
               <div key={tag.name} className='p-2'>
-                <TagItem key={tag.name} tag={tag} />
+                <TagItemMini key={tag.name} tag={tag} variant='default' />
               </div>
             )
           })}

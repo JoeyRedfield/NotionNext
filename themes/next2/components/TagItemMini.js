@@ -2,9 +2,10 @@ import SmartLink from '@/components/SmartLink'
 
 const TagItemMini = ({ tag, selected = false, variant = 'soft' }) => {
   const tagLabel = `${tag.name}${tag.count ? `(${tag.count})` : ''}`
+  const notionColorClass = `notion-${tag.color}_background`
   const defaultClass = selected
-    ? 'text-white dark:text-gray-100 bg-gray-600 dark:bg-gray-700'
-    : `next-right-hover-chip text-gray-600 dark:text-gray-300 notion-${tag.color}_background border border-transparent`
+    ? `${notionColorClass} text-gray-700 dark:text-black border border-gray-500/40 dark:border-gray-700/60 shadow-sm`
+    : `next-right-hover-chip text-gray-600 dark:text-gray-300 ${notionColorClass} border border-transparent`
 
   return (
     <SmartLink

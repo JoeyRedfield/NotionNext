@@ -1,4 +1,4 @@
-import TagItem from './TagItem'
+import TagItemMini from './TagItemMini'
 
 /**
  * 横向的标签列表
@@ -15,7 +15,7 @@ const TagList = ({ tagOptions, currentTag }) => {
     <li className='w-20 py-2 dark:text-gray-200 whitespace-nowrap'>标签:</li>
     {tagOptions.map(tag => {
       const selected = tag.name === currentTag
-      return <TagItem key={tag.name} tag={tag} selected={selected}/>
+      return <TagItemMini key={tag.name} tag={tag} selected={selected} variant='default' />
     })}
   </ul>
 }
